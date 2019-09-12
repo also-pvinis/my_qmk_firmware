@@ -118,9 +118,9 @@ enum {
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |     |     |     |     |     |   |VOLDN|MPREV|MPLAY|MNEXT|     |
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define _________________SYSCTL_L1_________________
-#define _________________SYSCTL_L2_________________
-#define _________________SYSCTL_L3_________________
+#define _________________SYSCTL_L1_________________  XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_BTN1 , XXXXXXX
+#define _________________SYSCTL_L2_________________  XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_RIGHT , KC_MS_WH_UP
+#define _________________SYSCTL_L3_________________  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_WH_DOWN
 
 //                                                    vol v                                                 ctl v
 #define _________________SYSCTL_R1_________________  KC_MUTE , KC_HOME , KC_UP   , KC_END                 , PV_LOCK
