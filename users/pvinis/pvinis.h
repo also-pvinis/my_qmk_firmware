@@ -32,10 +32,12 @@ enum {
 
   LR_QWERTY,
   LR_CARPALX,
+  LR_GAME,   // game layout (space on the left thumb, no modifiers, etc)
 
   LR_SYMBOL, // symbol input (!, @, #, etc)
   LR_SYSCTL, // system control (music, volume, keyboard flash, etc)
   LR_KBCTL,  // keyboard control (version, make, flash, etc)
+
 };
 
 
@@ -43,6 +45,7 @@ enum {
 #define BASE    TO(LR_BASE)
 #define QWERTY  TO(LR_QWERTY)
 #define CARPALX TO(LR_CARPALX)
+#define GAME    TO(LR_GAME)
 
 #define SYMBOL  MO(LR_SYMBOL)
 #define SYSCTL  MO(LR_SYSCTL)
@@ -134,7 +137,7 @@ enum {
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define __________________KBCTL_L1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L1_________________  GAME   , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define __________________KBCTL_L2_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define __________________KBCTL_L3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
