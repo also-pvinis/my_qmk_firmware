@@ -10,7 +10,11 @@ enum userspace_custom_keycodes {
   PV_VRSN, // prints firmware version
   PV_MAKE, // prints the make command of the keyboard
   PV_FLSH, // resets keyboard
-  PV_KTMR, // play katamari music
+
+  PV_SKTM, // play katamari song
+  PV_SSNC, // play sonic song
+
+  PV_LTGL, // toggle lights
 
   PV_SAFE_RANGE, // used for extra keycodes in the individual keymaps
 };
@@ -131,17 +135,17 @@ enum {
 #define _________________SYSCTL_R3_________________  KC_VOLD , KC_MPRV , KC_MPLY , KC_MNXT /* < music */  , KC_PWR
 
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-// |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
+// |GAME |CRPLX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|VERSN|MAKE |FLASH|XXXXX|
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define __________________KBCTL_L1_________________  GAME   , XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L2_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L1_________________  GAME   , CARPALX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L2_________________  PV_LTGL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L3_________________  PV_SSNC, PV_SKTM, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, PV_KTMR, XXXXXXX
+#define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define __________________KBCTL_R2_________________  XXXXXXX, PV_VRSN, PV_MAKE, PV_FLSH, XXXXXXX
 #define __________________KBCTL_R3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 

@@ -23,7 +23,7 @@
 #endif
 
 #ifdef AUDIO_ENABLE
-  // #define STARTUP_SONG SONG(SONIC_RING)
+//   #define STARTUP_SONG SONG(SONIC_RING)
 #endif
 
 #ifdef AUDIO_ENABLE
@@ -38,9 +38,9 @@
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   // ,-----------------------------.              ,-----------------------------.
-  // |    |    |    |    |    |QWER|              |    |    |    |    |    |    |
+  // |    |    |    |    |GAME|QWER|              |    |    |    |    |    |    |
   // |----+----+----+----+----+----|              |----+----+----+----+----+----|
-  // |Tab |    |    |    |    |CARP|              |    |    |    |    |    |Del |
+  // |Tab |    |    |    |    |CRPL|              |    |    |    |    |    |Del |
   // |----+----+----+----x----x----|              |----x----x----+----+----+----|
   // |EscC|    |    |    |    |    |              |    |    |    |    |    |Ent |
   // |----+----+----+----x----x----+----.    ,----|----x----x----+----+----+----|
