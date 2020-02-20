@@ -1,6 +1,9 @@
 #pragma once
 
 
+#define MASTER_RIGHT
+
+
 #ifdef PRODUCT
   #undef PRODUCT
   #define PRODUCT Iris Keyboard - pvinis
