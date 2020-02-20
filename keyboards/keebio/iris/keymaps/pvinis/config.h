@@ -14,8 +14,8 @@
 
 // Select hand configuration
 // #define MASTER_LEFT
-// #define MASTER_RIGHT
-#define EE_HANDS
+#define MASTER_RIGHT
+// #define EE_HANDS
 
 
 // choose pin to use for audio. c6 is the one iris uses.
