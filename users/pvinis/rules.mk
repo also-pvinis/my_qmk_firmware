@@ -1,7 +1,7 @@
 # add userspace file
 SRC += pvinis.c
 
-AUDIO_ENABLE     = no  # piezo speaker sounds
+AUDIO_ENABLE     = yes  # piezo speaker sounds
 RGBLIGHT_ENABLE  = no  # rgb leds underlight
 TAP_DANCE_ENABLE = yes
 BACKLIGHT_ENABLE = no  # leds under keycaps

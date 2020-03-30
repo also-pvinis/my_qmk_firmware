@@ -1,3 +1,3 @@
-AUDIO_ENABLE    = no # off for now
-RGBLIGHT_ENABLE = no # off for now
-ENCODER_ENABLE = yes
+AUDIO_ENABLE    = yes
+RGBLIGHT_ENABLE = no
+ENCODER_ENABLE  = yes

@@ -24,8 +24,14 @@
 #endif
 
 
-#define ENCODERS_PAD_A { F4 }
-#define ENCODERS_PAD_B { F5 }
-// #define ENCODERS_PAD_A_RIGHT { B5 }
-// #define ENCODERS_PAD_B_RIGHT { C6 }
-#define ENCODER_RESOLUTION 2
+#undef  RGBLED_NUM
+#define RGBLED_NUM 8    // Number of LEDs
+
+
+#ifdef ENCODER_ENABLE
+  #define ENCODERS_PAD_A { F4 }
+  #define ENCODERS_PAD_B { F5 }
+//   #define ENCODERS_PAD_A_RIGHT { B5 }
+//   #define ENCODERS_PAD_B_RIGHT { C6 }
+  #define ENCODER_RESOLUTION 2
+#endif
