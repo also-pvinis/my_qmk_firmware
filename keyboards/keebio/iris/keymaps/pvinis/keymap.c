@@ -233,8 +233,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
 #endif
 
 
-
-bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+bool process_record_keymap(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
     #ifdef AUDIO_ENABLE
     case PV_S01: if (record->event.pressed) PLAY_SONG(n01); return false; break;
@@ -317,5 +316,5 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     // case PV_S78: if (record->event.pressed) PLAY_SONG(n78); return false; break;
     #endif
   }
-  return true;
+  return true; // Process everything else normally
 }
