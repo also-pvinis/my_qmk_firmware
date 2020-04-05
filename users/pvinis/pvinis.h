@@ -14,7 +14,7 @@ enum userspace_custom_keycodes {
   PV_SSNC, // Play Sonic Ring.
   PV_SCIN, // Play Coin Sound.
 
-  PV_LTGL, // Toggle lights.
+  PV_TEST, // For quick testing purposes.
 
   PV_SAFE_RANGE, // Used for extra keycodes in individual keymaps.
 };
@@ -158,9 +158,9 @@ enum {
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define __________________KBCTL_L1_________________  GAME1  , GAME2  , CARPALX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L2_________________  PV_LTGL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L3_________________  PV_SSNC, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L1_________________  PV_SSNC, PV_SCIN, PV_TEST, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L2_________________  RGB_TOG, RGB_VAI, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L3_________________  RGB_MOD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX
 
 #define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define __________________KBCTL_R2_________________  XXXXXXX, PV_VRSN, PV_MAKE, PV_FLSH, XXXXXXX
@@ -172,5 +172,5 @@ enum {
 
 
 // Extra stuff that might be needed.
-void keyboard_post_init_user_local(void);
-uint32_t layer_state_set_user_local(uint32_t state);
+void keyboard_post_init_user_keymap(void);
+uint32_t layer_state_set_user_keymap(uint32_t state);

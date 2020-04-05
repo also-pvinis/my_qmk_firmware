@@ -13,14 +13,21 @@
 
 
 // Select hand configuration.
-#define MASTER_LEFT
-// #define MASTER_RIGHT
+// #define MASTER_LEFT
+#define MASTER_RIGHT
 // #define EE_HANDS
 
 
 // Choose pin to use for audio. C6 is the one iris uses.
 #ifdef AUDIO_ENABLE
-  #define C6_AUDIO
+	#define C6_AUDIO
+	#define STARTUP_SONG SONG(NO_SOUND) // No startup song.
+#endif
+
+
+#ifdef RGBLIGHT_ENABLE
+	#undef  RGBLED_NUM
+	#define RGBLED_NUM 16
 #endif
 
 
