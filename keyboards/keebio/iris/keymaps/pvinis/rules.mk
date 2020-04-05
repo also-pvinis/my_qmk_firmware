@@ -1,15 +1,9 @@
 TAP_DANCE_ENABLE = yes
-
-AUDIO_ENABLE     = no   # piezo speaker sounds
+AUDIO_ENABLE     = yes  # piezo speaker sounds
 RGBLIGHT_ENABLE  = yes  # rgb leds underlight
 ENCODER_ENABLE   = yes  # rotary knob
 
-
-# other stuff for other keyboards
-# BACKLIGHT_ENABLE = no  # leds under keycaps
-# MOUSEKEY_ENABLE  = yes
-# SLEEP_LED_ENABLE = no  # no led blinking while sleeping
-# NKRO_ENABLE      = yes
-
-# make firmware smaller
+# Some extra stuff to make firmware smaller.
 LINK_TIME_OPTIMIZATION_ENABLE = yes
+CONSOLE_ENABLE = no
+COMMAND_ENABLE = no
