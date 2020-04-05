@@ -10,7 +10,89 @@ enum userspace_custom_keycodes {
   PV_VRSN, // prints firmware version
   PV_MAKE, // prints the make command of the keyboard
   PV_FLSH, // resets keyboard
-  PV_KTMR, // play katamari music
+
+  PV_SKTM, // play katamari song
+  PV_SSNC, // play sonic song
+  PV_S01,
+  PV_S02,
+  PV_S03,
+  PV_S04,
+  PV_S05,
+  PV_S06,
+  PV_S07,
+  PV_S08,
+  PV_S09,
+  PV_S10,
+  PV_S11,
+  PV_S12,
+  PV_S13,
+  PV_S14,
+  PV_S15,
+  PV_S16,
+  PV_S17,
+  PV_S18,
+  PV_S19,
+  PV_S20,
+  PV_S21,
+  PV_S22,
+  PV_S23,
+  PV_S24,
+  PV_S25,
+  PV_S26,
+  PV_S27,
+  PV_S28,
+  PV_S29,
+  PV_S30,
+  PV_S31,
+  PV_S32,
+  PV_S33,
+  PV_S34,
+  PV_S35,
+  PV_S36,
+  PV_S37,
+  PV_S38,
+  PV_S39,
+  PV_S40,
+  PV_S41,
+  PV_S42,
+  PV_S43,
+  PV_S44,
+  PV_S45,
+  PV_S46,
+  PV_S47,
+  PV_S48,
+  PV_S49,
+  PV_S50,
+  PV_S51,
+  PV_S52,
+  PV_S53,
+  PV_S54,
+  PV_S55,
+  PV_S56,
+  PV_S57,
+  PV_S58,
+  PV_S59,
+  PV_S60,
+  PV_S61,
+  PV_S62,
+  PV_S63,
+  PV_S64,
+  PV_S65,
+  PV_S66,
+  PV_S67,
+  PV_S68,
+  PV_S69,
+  PV_S70,
+  PV_S71,
+  PV_S72,
+  PV_S73,
+  PV_S74,
+  PV_S75,
+  PV_S76,
+  PV_S77,
+  PV_S78,
+
+  PV_LTGL, // toggle lights
 
   PV_SAFE_RANGE, // used for extra keycodes in the individual keymaps
 };
@@ -32,10 +114,13 @@ enum {
 
   LR_QWERTY,
   LR_CARPALX,
+  LR_GAME1,   // game layout (space on the left thumb, no modifiers, etc)
+  LR_GAME2,   // game layout (space on the left thumb, no modifiers, etc, arrows)
 
   LR_SYMBOL, // symbol input (!, @, #, etc)
   LR_SYSCTL, // system control (music, volume, keyboard flash, etc)
   LR_KBCTL,  // keyboard control (version, make, flash, etc)
+
 };
 
 
@@ -43,6 +128,8 @@ enum {
 #define BASE    TO(LR_BASE)
 #define QWERTY  TO(LR_QWERTY)
 #define CARPALX TO(LR_CARPALX)
+#define GAME1   TO(LR_GAME1)
+#define GAME2   TO(LR_GAME2)
 
 #define SYMBOL  MO(LR_SYMBOL)
 #define SYSCTL  MO(LR_SYSCTL)
@@ -118,9 +205,9 @@ enum {
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |     |     |     |     |     |   |VOLDN|MPREV|MPLAY|MNEXT|     |
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define _________________SYSCTL_L1_________________
-#define _________________SYSCTL_L2_________________
-#define _________________SYSCTL_L3_________________
+#define _________________SYSCTL_L1_________________  XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_BTN1 , XXXXXXX
+#define _________________SYSCTL_L2_________________  XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_RIGHT , KC_MS_WH_UP
+#define _________________SYSCTL_L3_________________  XXXXXXX , XXXXXXX , XXXXXXX , XXXXXXX , KC_MS_WH_DOWN
 
 //                                                    vol v                                                 ctl v
 #define _________________SYSCTL_R1_________________  KC_MUTE , KC_HOME , KC_UP   , KC_END                 , PV_LOCK
@@ -128,17 +215,17 @@ enum {
 #define _________________SYSCTL_R3_________________  KC_VOLD , KC_MPRV , KC_MPLY , KC_MNXT /* < music */  , KC_PWR
 
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-// |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
+// |GAME |CRPLX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|VERSN|MAKE |FLASH|XXXXX|
 // ,-----+-----+-----x-----x-----,   ,-----x-----x-----+-----+-----,
 // |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|   |XXXXX|XXXXX|XXXXX|XXXXX|XXXXX|
 // ,-----+-----+-----+-----+-----,   ,-----+-----+-----+-----+-----,
-#define __________________KBCTL_L1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L2_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_L3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L1_________________  GAME1  , GAME2  , CARPALX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L2_________________  PV_LTGL, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
+#define __________________KBCTL_L3_________________  PV_SSNC, PV_SKTM, XXXXXXX, XXXXXXX, XXXXXXX
 
-#define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, PV_KTMR, XXXXXXX
+#define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define __________________KBCTL_R2_________________  XXXXXXX, PV_VRSN, PV_MAKE, PV_FLSH, XXXXXXX
 #define __________________KBCTL_R3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 

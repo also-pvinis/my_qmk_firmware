@@ -2,12 +2,13 @@
 #include "version.h"
 
 #ifdef AUDIO_ENABLE
-#include "audio.h"
+  #include "audio.h"
 #endif // AUDIO_ENABLE
 
 
 #ifdef AUDIO_ENABLE
-// float tone_katamari_rolling_star[][2] = SONG(KATAMARI_ROLLING_STAR);
+  float song_katamari_rolling_star[][2] = SONG(KATAMARI_ROLLING_STAR);
+  float song_sonic[][2] = SONG(SONIC_RING);
 #endif // AUDIO_ENABLE
 
 
@@ -37,6 +38,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       return false;
 
     case PV_MAKE:
+    // make keebio/iris/rev2:pvinis:avrdude
+    // make keebio/iris/rev2:pvinis:avrdude
       if (!record->event.pressed) {
         SEND_STRING("make " QMK_KEYBOARD ":" QMK_KEYMAP
 #if (defined(BOOTLOADER_DFU) || defined(BOOTLOADER_LUFA_DFU) || defined(BOOTLOADER_QMK_DFU))
@@ -55,12 +58,26 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       reset_keyboard();
       return false;
 
-    case PV_KTMR:
+    case PV_SKTM:
       if (record->event.pressed) {
 #ifdef AUDIO_ENABLE
-        // PLAY_SONG(tone_katamari_rolling_star);
+        // PLAY_SONG(song_katamari_rolling_star);
 #endif
       }
+      return false;
+
+    case PV_SSNC:
+      if (record->event.pressed) {
+#ifdef AUDIO_ENABLE
+
+        // PLAY_SONG(song_coin);
+#endif
+      }
+      return false;
+
+    case PV_LTGL:
+#ifdef RGBLIGHT_ENABLE
+#endif
       return false;
   }
   return process_record_keymap(keycode, record);
