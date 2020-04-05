@@ -13,8 +13,8 @@
 
 
 // Select hand configuration.
-// #define MASTER_LEFT
-#define MASTER_RIGHT
+#define MASTER_LEFT
+// #define MASTER_RIGHT
 // #define EE_HANDS
 
 
@@ -22,10 +22,6 @@
 #ifdef AUDIO_ENABLE
   #define C6_AUDIO
 #endif
-
-
-#undef  RGBLED_NUM
-#define RGBLED_NUM 8 // Number of LEDs
 
 
 #ifdef ENCODER_ENABLE
