@@ -1,4 +1,5 @@
 // pvinis iris
+// make keebio/iris/rev2:pvinis:avrdude
 // ,-----------------------------.              ┌────┬────┬────┬────┬────┬────┐
 // |    |    |    |    |    |    |              │    │    │    │    │    │    │
 // |----+----+----+----+----+----|              ├────┼────┼────┼────┼────┼────┤
@@ -44,6 +45,7 @@
 //   float n53[][2] = SONG(OLD_SPICE);
 //   float n56[][2] = SONG(RICK_ROLL);
 //   float n57[][2] = SONG(FF_PRELUDE);
+// RGB_MODE_KNIGHT
 //   float n78[][2] = SONG(KATAMARI_ROLLING_STAR);
 #endif
 
@@ -62,11 +64,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                    |Cmd |LOWR|Bspc|      |Spc |RASE|RAlt|
   //                    `----+---------'      `--------------'
   [LR_BASE] = LAYOUT_wrapper(
-    _______, _______, _______, _______, GAME1  , QWERTY ,                        _______, _______, _______, _______, _______, _______,
-    KC_TAB , RGB_MODE_RGBTEST, RGB_MODE_SNAKE, RGB_MODE_KNIGHT, RGB_MODE_XMAS, RGB_MODE_GRADIENT,                        _______, _______, _______, _______, _______, KC_DEL ,
-    PV_ESCC, RGB_VAD, RGB_MODE_PLAIN, RGB_MODE_BREATHE, RGB_MODE_RAINBOW, RGB_MODE_SWIRL,                        _______, _______, _______, _______, _______, KC_ENT ,
-    KC_LSFT, RGB_VAI, RGB_SAD, RGB_SAI, RGB_HUD, RGB_HUI, RGB_MODE_FORWARD,      _______, _______, _______, _______, _______, _______, KC_RSFT,
-                                        KC_LGUI, SYMBOL , RGB_MODE_REVERSE,      KC_SPC , SYSCTL , KC_RALT
+    _______, _______, _______, _______, GAME1  , KC_4   ,                        KC_1   , _______, _______, _______, _______, _______,
+    KC_TAB , ___________________________________________,                        ___________________________________________, KC_DEL ,
+    PV_ESCC, ___________________________________________,                        ___________________________________________, KC_ENT ,
+    KC_LSFT, ___________________________________________, _______,      _______, _______, _______, _______, _______, _______, KC_RSFT,
+                                        KC_LGUI, SYMBOL , KC_BSPC,      KC_SPC , SYSCTL , KC_RALT
   ),
 
   // ,-----------------------------.              ,-----------------------------.
