@@ -32,8 +32,8 @@
 
 
 #ifdef ENCODER_ENABLE
-  #define ENCODERS_PAD_A { F4 } // I connected the encoder to F4 and F5.
-  #define ENCODERS_PAD_B { F5 }
+  #define ENCODERS_PAD_A { F5 } // I connected the encoder to F4 and F5.
+  #define ENCODERS_PAD_B { F4 }
 //   #define ENCODERS_PAD_A_RIGHT { B5 }
 //   #define ENCODERS_PAD_B_RIGHT { C6 }
   #define ENCODER_RESOLUTION 2
