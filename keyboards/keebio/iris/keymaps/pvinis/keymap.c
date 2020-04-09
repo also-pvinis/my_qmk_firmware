@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //                    |Cmd |LOWR|Bspc|      |Spc |RASE|RAlt|
   //                    `----+---------'      `--------------'
   [LR_BASE] = LAYOUT_wrapper(
-    KC_3   , _______, _______, _______, GAME1  , QWERTY ,                        KC_1   , _______, _______, _______, _______, _______,
+    KC_MUTE, _______, _______, _______, GAME1  , QWERTY ,                        KC_1   , _______, _______, _______, _______, _______,
     KC_TAB , ___________________________________________,                        ___________________________________________, KC_DEL ,
     PV_ESCC, ___________________________________________,                        ___________________________________________, KC_ENT ,
     KC_LSFT, ___________________________________________, _______,      _______, _______, _______, _______, _______, _______, KC_RSFT,
@@ -166,9 +166,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 void encoder_update_user(uint8_t index, bool clockwise) {
     // if (index == 0) { /* First encoder */
         if (clockwise) {
-            tap_code(KC_DOWN);
+            tap_code(KC_VOLU);
         } else {
-            tap_code(KC_UP);
+            tap_code(KC_VOLD);
         }
     // }
 }
