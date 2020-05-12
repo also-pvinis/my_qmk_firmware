@@ -10,10 +10,12 @@ enum userspace_custom_keycodes {
   PV_VRSN, // Print firmware version.
   PV_MAKE, // Print the make command of the keyboard.
   PV_FLSH, // Reset keyboard.
+  PV_ERST, // Reset EEPOM.
 
   PV_SSNC, // Play Sonic Ring.
   PV_SCIN, // Play Coin Sound.
 
+	PV_RNDK, // Generate random base64 key.
   PV_TEST, // For quick testing purposes.
 
   PV_SAFE_RANGE, // Used for extra keycodes in individual keymaps.
@@ -130,7 +132,7 @@ enum {
 #define _________________SYMBOL_L2_________________  KC_HASH, KC_DLR , KC_LPRN, KC_RPRN, KC_MINS
 #define _________________SYMBOL_L3_________________  KC_PERC, KC_CIRC, KC_LBRC, KC_RBRC, KC_PLUS
 
-#define _________________SYMBOL_R1_________________  KC_BSLS, _______, KC_GRV , _______, _______
+#define _________________SYMBOL_R1_________________  KC_BSLS, PV_RNDK, KC_GRV , _______, _______
 #define _________________SYMBOL_R2_________________  KC_EQL , KC_AMPR, KC_QUOT, KC_DQUO, KC_PIPE
 #define _________________SYMBOL_R3_________________  KC_ASTR, KC_TILD, KC_LABK, KC_RABK, KC_SLSH
 
@@ -164,7 +166,7 @@ enum {
 #define __________________KBCTL_L3_________________  RGB_MOD, RGB_VAD, XXXXXXX, XXXXXXX, XXXXXXX
 
 #define __________________KBCTL_R1_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
-#define __________________KBCTL_R2_________________  XXXXXXX, PV_VRSN, PV_MAKE, PV_FLSH, XXXXXXX
+#define __________________KBCTL_R2_________________  XXXXXXX, PV_VRSN, PV_MAKE, PV_FLSH, PV_ERST
 #define __________________KBCTL_R3_________________  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 
 // We need wrappers in order for these definitions, because they need to be expanded before being used as arguments to the LAYOUT_xxx macro.

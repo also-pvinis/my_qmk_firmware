@@ -56,6 +56,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 			reset_keyboard();
 			return false;
 
+		case PV_ERST:
+			if (record->event.pressed) {
+				eeconfig_init();
+			}
+			return false;
+
 		case PV_SSNC:
 			if (record->event.pressed) {
 				#ifdef AUDIO_ENABLE
@@ -69,6 +75,12 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 				#ifdef AUDIO_ENABLE
 					PLAY_SONG(song_coin_sound);
 				#endif
+			}
+			return false;
+
+		case PV_RNDK:
+			if (record->event.pressed) {
+				tap_random_base64();
 			}
 			return false;
 
