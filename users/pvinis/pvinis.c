@@ -88,11 +88,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 	qk_tap_dance_action_t tap_dance_actions[] = {};
 #endif
 
-void keyboard_post_init_rgb_light(void) {
-	rgblight_sethsv(HSV_GOLD);
-	rgblight_mode(RGBLIGHT_MODE_BREATHING);
-	// rgblight_mode(RGBLIGHT_MODE_KNIGHT+1);
-}
+#ifdef RGBLIGHT_ENABLE
+	void keyboard_post_init_rgb_light(void) {
+		rgblight_sethsv(HSV_GOLD);
+		rgblight_mode(RGBLIGHT_MODE_BREATHING);
+		// rgblight_mode(RGBLIGHT_MODE_KNIGHT+1);
+	}
+#endif
 
 // Init stuff.
 void keyboard_post_init_user(void) {
