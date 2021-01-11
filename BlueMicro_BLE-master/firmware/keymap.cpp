@@ -20,9 +20,9 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 // Initialize matrix with nothing...
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     KEYMAP2ARRAY(KEYMAP(
-        KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
-        KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,   
+        KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
+        KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
         KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO
     ));
 
@@ -33,22 +33,22 @@ void setupKeymap() {
    // this is a keymap that's used for testing that each key is responding properly to key presses
    // flash this keymap to both left and right to test whether each half works properly.
    // once tested, you can flash the left and right to their respective halves.
-   uint32_t layer0_single[MATRIX_ROWS][MATRIX_COLS] = 
+   uint32_t layer0_single[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP(
-            KC_1,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_Y, 
+            KC_1,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_Y,
             KC_2,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,  KC_H,
             KC_3,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,  KC_N,
-            KC_4,  KC_5,    KC_6,    KC_7,    KC_8,    KC_9,  KC_0 
+            KC_4,  KC_5,    KC_6,    KC_7,    KC_8,    KC_9,  KC_0
         );
 
 
 /* Qwerty
  * ,------------------------------------------------.
- * | Esc  |   Q  |   W  |   E  |   R  |   T  |   :  | 
+ * | Esc  |   Q  |   W  |   E  |   R  |   T  |   :  |
  * |------+------+------+------+------+-------------|
  * | L(3) |   A  |   S  |   D  |   F  |   G  |   (  |
  * |------+------+------+------+------+------|------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |   -  | 
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   -  |
  * |------+------+------+------+------+------+------'
  * | Ctrl | GUI  | Alt  | L(2) | L(1) |Space |
  * `-----------------------------------------'
@@ -89,9 +89,9 @@ void setupKeymap() {
 * |------+------+------+------+------+-------------|
 * |   `  |   !  |   @  |   #  |   $  |   %  |   [  |
 * |------+------+------+------+------+------|------|
-* | Shift| xxx  | xxx  | VOL+ | VOL- | MUTE | S+F5 | 
+* | Shift| xxx  | xxx  | VOL+ | VOL- | MUTE | S+F5 |
 * |------+------+------+------+------+------+------'
-* | Ctrl | GUI  | Alt  | L(2) | L(1) |  F5  | 
+* | Ctrl | GUI  | Alt  | L(2) | L(1) |  F5  |
 * `-----------------------------------------'
 */
     uint32_t layer1_left[MATRIX_ROWS][MATRIX_COLS] =
@@ -163,11 +163,11 @@ void setupKeymap() {
 
 /* Layer 3  LEFT
 * ,------------------------------------------------.
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * |------+------+------+------+------+-------------|
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * |------+------+------+------+------+------|------|
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * |------+------+------+------+------+------+------'
 * | xxx  | xxx  | xxx  | xxx  | xxx  | xxx  |
 * `-----------------------------------------'
@@ -182,11 +182,11 @@ void setupKeymap() {
 
 /* Layer 3 RIGHT
 * ,------------------------------------------------.
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * |------+------+------+------+------+-------------|
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * |------+------+------+------+------+------|------|
-* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx | 
+* | xxx  |  xxx |  xxx |  xxx |  xxx |  xxx |  xxx |
 * `------+------+------+------+------+------+------|
 *        | xxx  | xxx  | xxx  | xxx  | xxx  | xxx  |
 *        `-----------------------------------------'
@@ -246,7 +246,7 @@ void process_user_macros(uint16_t macroid)
     uint32_t dvorakL[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
             KC_ESC,  KC_QUOTE,KC_COMMA,KC_DOT,  KC_P,    KC_Y,  KC_COLN,   \
-            KC_TAB,  KC_A,    KC_O,    KC_E,    KC_I,    KC_U,  KC_LPRN,    \ 
+            KC_TAB,  KC_A,    KC_O,    KC_E,    KC_I,    KC_U,  KC_LPRN,    \
             KC_LSFT, KC_SCLN, KC_Q,    KC_J,    KC_K,    KC_X,  KC_MINS,    \
             LAYER_3, KC_LGUI, KC_LALT, LAYER_2, LAYER_1, KC_SPC,_______     \
         );
@@ -257,9 +257,9 @@ void process_user_macros(uint16_t macroid)
             KC_PLUS,  KC_B,    KC_M,    KC_W,    KC_V,    KC_Z,      KC_ENT,    \
             _______,  KC_SPC,  LAYER_1, KC_LEFT, KC_UP,   KC_DOWN,   KC_RIGHT   \
         );
-        
+
     switch ((macroid))
-    { 
+    {
         case (KM_QWERTY):
             for (int row = 0; row < MATRIX_ROWS; ++row)
             {
