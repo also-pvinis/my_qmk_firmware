@@ -160,7 +160,7 @@ void setupKeymap() {
  *        | Space| L(1) | Home | PGUP | PGDN | End  |
  *        `-----------------------------------------'
  */
-    uint32_t layer1_right[MATRIX_ROWS][MATRIX_COLS] =
+    uint32_t layer1[MATRIX_ROWS][MATRIX_COLS] =
         KEYMAP( \
         KC_RCBR, KC_6,    KC_7,    KC_8,    KC_9,     KC_0,      KC_DEL,    \
         KC_RBRC, KC_CIRC, KC_AMPR, KC_ASTR, KC_BSLS,  KC_LPRN,   KC_RPRN,   \
