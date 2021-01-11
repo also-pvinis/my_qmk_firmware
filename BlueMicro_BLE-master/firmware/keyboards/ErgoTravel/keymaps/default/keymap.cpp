@@ -22,10 +22,10 @@ LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR P
 #if KEYBOARD_SIDE == SINGLE
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     KEYMAP2ARRAY(KEYMAP(
-        KC_1,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_Y, 
+        KC_1,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_Y,
         KC_2,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,  KC_H,
         KC_3,  KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,  KC_N,
-        KC_4,  KC_5,    KC_6,    KC_7,    KC_8,    KC_9,  KC_0 
+        KC_4,  KC_5,    KC_6,    KC_7,    KC_8,    KC_9,  KC_0
     ));
 
 void setupKeymap() {
@@ -43,11 +43,11 @@ void setupKeymap() {
 // Minh Ta default keymap
 /* Qwerty
  * ,------------------------------------------------.
- * | Esc  |   Q  |   W  |   E  |   R  |   T  |   :  | 
+ * | Esc  |   Q  |   W  |   E  |   R  |   T  |   :  |
  * |------+------+------+------+------+-------------|
- * | Tab  |   A  |   S  |   D  |   F  |   G  |   (  |
+ * | Tab  |   A  |   S  |   D  |   F  |   G  |   B  |
  * |------+------+------+------+------+------|------|
- * | Shift|   Z  |   X  |   C  |   V  |   B  |   -  | 
+ * | Shift|   Z  |   X  |   C  |   V  |   B  |   -  |
  * |------+------+------+------+------+------+------'
  * | Ctrl | GUI  | Alt  | L(2) | L(1) |Space |
  * `-----------------------------------------'
@@ -56,12 +56,12 @@ void setupKeymap() {
 std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
     KEYMAP2ARRAY(KEYMAP(
         KC_ESC,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,  KC_COLN,   \
-        KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,  KC_LPRN,    \
+        KC_TAB,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,  KC_B,    \
         KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,  KC_MINS,    \
         KC_LCTL, KC_LGUI, KC_LALT, LAYER_2, LAYER_1, KC_SPC,_______     \
     ));
 
- 
+
 void setupKeymap() {
 
 /* Layer 1 (Raise)
@@ -70,7 +70,7 @@ void setupKeymap() {
  * |------+------+------+------+------+-------------|
  * |   `  |   !  |   @  |   #  |   $  |   %  |   [  |
  * |------+------+------+------+------+------|------|
- * | Shift| xxx  | xxx  | VOL+ | VOL- | MUTE |  F5  | 
+ * | Shift| xxx  | xxx  | VOL+ | VOL- | MUTE |  F5  |
  * |------+------+------+------+------+------+------'
  * | Ctrl | GUI  | Alt  | L(2) | L(1) |Space |
  * `-----------------------------------------'
@@ -145,7 +145,7 @@ std::array<std::array<Key, MATRIX_COLS>, MATRIX_ROWS> matrix =
         _______,  KC_SPC,  LAYER_1, KC_LEFT, KC_UP,   KC_DOWN,   KC_RIGHT   \
     ));
 
- 
+
 
 void setupKeymap() {
 
