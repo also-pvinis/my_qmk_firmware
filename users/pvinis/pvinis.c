@@ -36,6 +36,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 			return false;
 
 		case PV_MAKE:
+			// example:
 			// make ergodox_ez:pvinis:teensy
 			if (!record->event.pressed) {
 				SEND_STRING(
